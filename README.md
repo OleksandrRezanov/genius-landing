@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Genius landing - [DEMO-LINK](https://OleksandrRezanov.github.io/genius-landing)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application built using React. It features a header component with a responsive burger menu that toggles the display of a navigation menu. The application is styled using SCSS and includes custom buttons and other UI components.
 
-## Available Scripts
+## Get started:
 
-In the project directory, you can run:
+1. **Clone the repository:**
 
-### `npm start`
+   ```bash
+   git clone https://github.com/OleksandrRezanov/genius-landing.git
+   cd your-repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Install the dependencies:**
+   
+   ```bash
+   npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Start the development server:**
+   
+   ```bash
+   npm start
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features:
 
-### `npm run build`
+1. **Burger Menu:**
+   - Implemented a responsive burger menu for navigation on smaller screens.
+   - Provides intuitive access to navigation links while conserving screen space.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Responsive Design:**
+   - Designed the website to be fully responsive across all devices, ensuring optimal viewing experience on desktops, tablets, and smartphones.
+   - Utilized media queries and flexible layouts to adapt the content and layout based on screen size.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Clickable Modules List with Dropdown:**
+   - Created a clickable list of modules for easy navigation.
+   - Implemented a dropdown feature to display additional information or options related to each module upon clicking.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Registration Form with Input Validation:**
+   - Developed a user registration form with fields for inputting necessary information.
+   - Implemented input validation to ensure the correctness and completeness of user-provided data.
+   - Validated input fields for criteria such as required fields, correct email format, password strength, etc.
 
-### `npm run eject`
+5. **Expandable FAQ Section:**
+   - Integrated a clickable list of frequently asked questions (FAQ).
+   - Implemented functionality to expand and collapse answers for each question upon clicking, providing a user-friendly experience for accessing additional information.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+These features collectively enhance the usability, accessibility, and interactivity of the website, providing users with a seamless browsing experience across various devices while facilitating navigation, information access, and user interaction.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies Used:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React:** Utilized React library for building interactive user interfaces and managing state efficiently.
+- **JavaScript:** Employed JavaScript for client-side scripting to enhance website interactivity and functionality.
+- **SCSS (Sass):** Used SCSS preprocessor to write cleaner and more organized CSS code with features like variables, nesting, and mixins, enhancing maintainability and scalability of stylesheets.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
