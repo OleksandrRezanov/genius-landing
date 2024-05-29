@@ -29,6 +29,7 @@
   }
 
   &__number {
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     margin-right: 16px;

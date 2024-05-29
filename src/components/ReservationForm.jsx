@@ -16,18 +16,31 @@ export const ReservationForm = () => {
     phone: ''
   });
 
+  const [ submitted, setSubmitted] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    if (name === 'phone') {
+      const filteredValue = value.replace(/\D/g, '');
+    
+      setFormData({
+        ...formData,
+        phone: filteredValue
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
 
     setErrors({
       fullName: '',
       email: '',
       phone: ''
     });
+
+    setSubmitted(false);
   };
 
   const validate = () => {
@@ -65,6 +78,7 @@ export const ReservationForm = () => {
     e.preventDefault();
     if (validate()) {
       console.log('Form submitted:', formData);
+      setSubmitted(true);
       setFormData({
         fullName: '',
         email: '',
@@ -121,6 +135,8 @@ export const ReservationForm = () => {
           />
           {errors.phone && <p className='reservation-form__error'>{errors.phone}</p>}
         </div>
+
+        {submitted && <p className='reservation-form__error'>Дякуємо! Дані відправлено!</p>}
 
         <div className='reservation-form__button'>
           <PrimaryButton type='purple' title='Записатися на курс' handleClick={handleSubmit} />
