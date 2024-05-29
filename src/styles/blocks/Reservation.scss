@@ -1,0 +1,178 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.purple {
+  color: $page-secondary-text-color;
+}
+
+.reservation {
+  display: flex;
+  gap: 38px;
+
+  @include on-tablet {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__description {
+    max-width: 586px;
+
+    @include on-tablet {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+
+    @include on-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 38px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 14px;
+    line-height: 17.5px;
+
+    @include on-mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+    }
+
+    &--calendar::before {
+      background-image: url('../../img/icons/calendar-icon--purple.svg');
+    }
+
+    &--world::before {
+      background-image: url('../../img/icons/world-icon--purple.svg');
+    }
+
+    &--flag::before {
+      background-image: url('../../img/icons/flag-icon--purple.svg');
+    }
+
+    &--clock {
+      @include on-mobile {
+        display: none;
+      }
+
+      &::before {
+        background-image: url('../../img/icons/clock-icon--purple.svg');
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+
+    @include on-mobile {
+      margin-bottom: 16px;
+    }
+
+    &--large {
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 55px;
+
+      @include on-mobile {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 45px;
+      }
+    }
+
+    &--small {
+      max-width: 387px;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 32.6px;
+
+      @include on-mobile {
+        margin-bottom: 60px;
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+
+    @include on-mobile {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  &__time {
+    display: flex;
+    gap: 16px;
+
+    @include on-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__time-container {
+    display: inline-block;
+    padding: 12px 32px 0;
+    border-radius: 10px;
+    text-align: center;
+    color: $modules-text-color;
+    background-color: $page-primary-text-color;
+
+    @include on-mobile {
+      width: 60px;
+      padding: 12px 0 0;
+    }
+  }
+
+  &__time-value {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 12px;
+      line-height: 26px;
+      text-align: center;
+    }
+  }
+
+  &__time-unit {
+    font-size: 12px;
+    line-height: 26px;
+  }
+}

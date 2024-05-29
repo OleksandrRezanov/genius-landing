@@ -1,0 +1,75 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.advantages {
+  max-width: 1183px;
+  display: flex;
+  justify-content: end;
+  background-image: url('../../img/advantages-bg.png');
+  background-repeat: no-repeat;
+
+  @include on-tablet {
+    max-width: 580px;
+    margin: 0 auto;
+    padding-bottom: 724px;
+    background-position: center bottom;
+  }
+
+  @include on-mobile {
+    max-width: 100%;
+    margin: 0;
+    padding-bottom: 417px;
+    background-size: contain;
+  }
+
+  &__info {
+    width: 558px;
+
+    @include on-mobile {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 60px;
+
+    @include on-mobile {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 35px;
+    }
+
+    &--highlighted {
+      color: $page-secondary-text-color;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @include on-mobile {
+      margin-top: 24px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &__item {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 14px;
+      line-height: 17.5px;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}

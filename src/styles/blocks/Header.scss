@@ -1,0 +1,65 @@
+@import '../utils/variables';
+@import '../utils/mixins.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    display: flex;
+    gap: 40px;
+    font-size: 14px;
+    line-height: 17.5px;
+    
+    @include on-tablet {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $page-bg-color;
+      padding: 20px;
+      z-index: 10;
+    }
+    
+    &--open {
+      @include on-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+    }
+    
+    &-item {
+      cursor: pointer;
+      transition-duration: $hover-transition-duration;
+
+      &:hover {
+        color: $header-button-hover-color;
+      }
+    }
+  }
+
+  &__button {
+    @include on-mobile {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 36px;
+    height: 36px;
+    // background-image: url('../../img/icons/menu-burger-icon.svg');
+    background-size: cover;
+    cursor: pointer;
+
+    @include on-tablet {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.info {
+  display: flex;
+  justify-content: space-between;
+
+  @include on-tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 38px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 14px;
+    line-height: 17.5px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+    }
+
+    &--calendar::before {
+      background-image: url('../../img/icons/calendar-icon--white.svg');
+    }
+
+    &--world::before {
+      background-image: url('../../img/icons/world-icon--white.svg');
+    }
+
+    &--flag {
+      @include on-mobile {
+        display: none;
+      }
+
+      &::before {
+        background-image: url('../../img/icons/flag-icon--white.svg');
+      }
+    }
+
+    &--clock::before {
+      background-image: url('../../img/icons/clock-icon--white.svg');
+    }
+  }
+
+  &__title-container {
+    display: flex;
+  }
+
+  &__title {
+    padding-top: 40px;
+    max-width: 300px;
+    font-weight: 700;
+    font-size: 170px;
+    color: $page-secondary-text-color;
+
+    @include on-mobile {
+      padding-top: 20px;
+      font-size: 96px;
+    }
+
+    &--highlighted {
+      text-transform: uppercase;
+      font-size: 44px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 70px;
+    margin-left: -65px;
+    max-width: 226px;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include on-mobile {
+      margin-top: 35px;
+      margin-left: -135px;
+      max-width: 198px;
+      font-size: 14px;
+      line-height: 17.5px;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__raiting {
+    position: relative;
+    margin-top: 21px;
+    padding-left: 132px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @include on-mobile {
+      font-size: 14px;
+      line-height: 17.5px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 112px;
+      height: 24px;
+      background-image: url('../../img/icons/rating.svg');
+    }
+  }
+
+  &__description {
+    max-width: 532px;
+    margin-top: 60px;
+    font-size: 26px;
+    line-height: 32px;
+
+    @include on-tablet {
+      margin-top: 40px;
+    }
+
+    @include on-mobile {
+      margin-top: 40px;
+      max-width: 267px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    margin-top: 60px;
+    display: inline-block;
+
+    @include on-tablet {
+      margin-top: 40px;
+    }
+
+    @include on-mobile {
+      display: block;
+      width: 227px;
+      margin: 40px auto 0;
+    }
+  }
+
+  &__seats {
+    @include on-mobile {
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: end;
+    width: 605px;
+    height: 659px;
+    background-image: url(../../img/info-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include on-tablet {
+      margin-top: 40px;
+    }
+
+    @include on-mobile {
+      width: 318px;
+      height: 344px;
+    }
+  }
+
+  &__speakers {
+    box-sizing: border-box;
+    width: 165px;
+    height: 360px;
+    padding: 60px 32px;
+    text-align: center;
+    background-color: $page-secondary-text-color;
+    border-radius: 20px;
+
+    @include on-mobile {
+      width: 88px;
+      height: 226px;
+      padding: 32px 16px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 30px;
+
+    @include on-mobile {
+      font-size: 14px;
+      line-height: 17.5px;
+    }
+  }
+
+  &__images {
+    width: 72px;
+
+    @include on-mobile {
+      width: 48px;
+    }
+  }
+
+  &__seats {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+}

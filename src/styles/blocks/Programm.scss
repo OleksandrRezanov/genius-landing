@@ -1,0 +1,88 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.bold {
+  font-weight: 700;
+}
+
+.programm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include on-tablet {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  &__left {
+    max-width: 450px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+
+    @include on-mobile {
+      max-width: 234px;
+      margin: 0 auto 24px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__right {
+    max-width: 387px;
+  }
+
+  &__info {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__description-item {
+    display: inline-block;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__description-value {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 64px;
+    background-color: $page-secondary-text-color;
+  }
+
+  &__description-subject {
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+}

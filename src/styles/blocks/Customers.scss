@@ -1,0 +1,48 @@
+@import '../utils/mixins.scss';
+
+.customers {
+  text-align: center;
+
+  &__title {
+    max-width: 546px;
+    margin: 0 auto 32px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+
+    @include on-mobile {
+      margin-bottom: 32px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+    @include on-tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include on-mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

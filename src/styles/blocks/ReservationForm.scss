@@ -1,0 +1,155 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.reservation-form {
+  position: relative;
+  padding: 60px 104px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: $page-primary-text-color;
+
+  @include on-mobile {
+    padding: 60px 20px;
+  }
+
+  &__title {
+    max-width: 290px;
+    margin-bottom: 20px;
+    padding-left: 61px;
+
+    text-align: left;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+
+    color: $modules-text-color;
+
+    @include on-tablet {
+      margin: 0 auto 20px;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    @include on-mobile {
+      margin-bottom: 12px;
+      max-width: 181px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+
+    color: $reservation-form-text-secondary-color;
+
+    @include on-mobile {
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  &__input {
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 32px;
+    border: 1px solid $reservation-form-border-color;
+    border-radius: 4px;
+
+    font-size: 14px;
+    line-height: 26px;
+
+
+    &--phone {
+      margin-bottom: 32px;
+      padding-left: 80px;
+      background-image: url('../../img/icons/country.svg');
+      background-repeat: no-repeat;
+      background-position: 32px center;
+
+      @include on-mobile {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__error {
+    padding-bottom: 10px;
+    color: $error-color;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  &__seats {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 17.5px;
+    color: $reservation-form-text-auxiliary-color;
+
+    @include on-mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__agreement {
+    margin: 0 auto;
+    max-width: 230px;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: $reservation-form-text-auxiliary-color;
+  }
+
+  &__discount {
+    box-sizing: border-box;
+    position: absolute;
+    right: -44px;
+    top: -33px;
+    width: 220px;
+    padding: 49px 51px 56px 76px;
+
+    background-image: url('../../img/form-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include on-mobile {
+      width: 134px;
+      right: -15px;
+      top: -36px;
+      padding: 28px 29px 32px 43px;
+    }
+  }
+
+  &__discount-value {
+    max-width: 93px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+
+    @include on-mobile {
+      font-size: 8px;
+      line-height: 10px;
+    }
+
+    &--large {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 37.6px;
+
+      @include on-mobile {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.answers-item {
+  position: relative;
+  padding: 20px 56px 20px 76px;
+  border-radius: 10px;
+  background-color: $answers-item-bg-color;
+
+  @include on-mobile {
+    padding: 7px 16px 7px 60px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../img/icons/plus-icon.svg');
+    cursor: pointer;
+
+    transition-duration: $hover-transition-duration;
+    transform: translateY(-50%);
+    transform-origin: center;
+
+    @include on-mobile {
+      left: 16px;
+    }
+  }
+
+  &__selected {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  &__answer {
+    padding: 10px;
+    text-align: center;
+  }
+}

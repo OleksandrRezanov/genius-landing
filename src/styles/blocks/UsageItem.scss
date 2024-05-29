@@ -1,0 +1,44 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.usage-item {
+  padding: 40px;
+  border-radius: 32px;
+
+  background: radial-gradient(circle at left bottom,
+      $bg-gradient-color-1 0%,
+      $bg-gradient-color-2 25%,
+      $bg-gradient-color-3 50%,
+      $bg-gradient-color-4 100%);
+
+  @include on-mobile {
+    padding: 40px 32px;
+  }
+
+  &__title {
+    padding-top: 72px;
+    padding-bottom: 24px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    color: $page-secondary-text-color;
+    background-repeat: no-repeat;
+
+    @include on-mobile {
+      padding-top: 60px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__body {
+    font-size: 14px;
+    line-height: 17.5px;
+    color: $footer-license-color;
+
+    @include on-mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

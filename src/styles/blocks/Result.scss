@@ -1,0 +1,107 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.highlighted {
+  color: $page-secondary-text-color;
+}
+
+.result {
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+
+    @include on-mobile {
+      margin-bottom: 24px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 500px;
+    margin: 0 auto 40px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+
+    @include on-mobile {
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__statistic {
+    height: 80px;
+    margin-bottom: 40px;
+    background-image: url('../../img/result-statistic.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @include on-mobile {
+      margin-bottom: 24px;
+      background-image: url('../../img/result-statistic-mobile.png');
+    }
+  }
+
+  &__container {
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include on-tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @include on-mobile {
+      gap: 12px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24.5px;
+  }
+
+  &__percent {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: center;
+
+    &--50 {
+      background-color: $page-secondary-text-color;
+    }
+
+    &--30 {
+      background-color: $result-percent-30-bg-color;
+      color: $modules-text-color;
+    }
+
+    &--20 {
+      background-color: $page-primary-text-color;
+      color: $modules-text-color;
+    }
+  }
+
+  &__item {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+
+    @include on-mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}

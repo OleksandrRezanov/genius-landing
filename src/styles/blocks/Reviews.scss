@@ -1,0 +1,89 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.reviews {
+  text-align: center;
+
+  &__title {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+
+    @include on-tablet {
+      margin-bottom: 40px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+
+    &--highlighted {
+      color: $page-secondary-text-color;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    height: 829px;
+    margin-bottom: 60px;
+
+    background-image: url('../../img/slider-image.png');
+
+    @include on-tablet {
+      height: 609px;
+      margin-bottom: 40px;
+      background-image: url('../../img/slider-mini.png');
+    }
+
+    @include on-mobile {
+      height: 421px;
+      background-size: cover;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 24px;
+      background-image: url('../../img/icons/slider-arrow-left.svg');
+      background-size: cover;
+      cursor: pointer;
+
+      @include on-tablet {
+        display: none;
+      }
+    }
+
+    &::before {
+      left: -64px;
+    }
+
+    &::after {
+      right: -64px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__dots {
+    display: none;
+
+    @include on-tablet {
+      display: block;
+      width: 92px;
+      height: 12px;
+      margin: 0 auto 60px;
+      background-image: url('../../img/icons/dots-icon.png');
+    }
+
+    @include on-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+  }
+}

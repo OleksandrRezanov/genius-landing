@@ -1,0 +1,24 @@
+@import '../utils/variables.scss';
+
+.audience-card {
+  padding: 112px 15.5px 42px;
+  border-radius: 20px;
+  background-color: $audience-card-bg-color;
+  background-image: url('../../img/icons/audience-card-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center 40px;
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 17.5px;
+    text-align: center;
+  }
+}

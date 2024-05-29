@@ -1,0 +1,93 @@
+// src/styles/main.scss або src/index.css
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+@import './styles/utils/normalize';
+@import './styles/utils/variables';
+@import './styles/utils/mixins';
+
+.app {
+  padding-top: 20px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  color: $page-primary-text-color;
+  background-color: $page-bg-color;
+  transition-duration: 1.3s;
+
+  &__info {
+    margin-top: 60px;
+  }
+
+  &__advantages,
+  &__knowledge,
+  &__areas,
+  &__teachers,
+  &__programm,
+  &__expectations,
+  &__result,
+  &__education,
+  &__usage,
+  &__customers,
+  &__payment,
+  &__employment,
+  &__reservation,
+  &__reviews,
+  &__answers {
+    margin-top: 120px;
+
+    @include on-mobile {
+      margin-top: 100px;
+    }
+  }
+
+  &__audience {
+    margin-top: 130px;
+
+    @include on-mobile {
+      margin-top: 100px;
+    }
+  }
+
+  &__programm {
+    padding: 80px 0;
+    background-image: url('./img/programm-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+
+    @include on-tablet {
+      background-size: cover;
+    }
+
+    @include on-mobile {
+      padding: 100px 0;
+    }
+  }
+
+  &__modules {
+    padding: 120px 0;
+    background-color: $page-primary-text-color;
+  }
+
+  &__answers {
+    background-color: $audience-bg-color;
+  }
+
+  &__footer {
+    padding-top: 120px;
+  }
+}
+
+.content-wrapper {
+  max-width: 1228px;
+  padding: 0 106px;
+  margin: 0 auto;
+
+  @include on-tablet {
+    max-width: 604px;
+    padding: 0 82px;
+  }
+
+  @include on-mobile {
+    max-width: 320px;
+    padding: 0 20px;
+  }
+}

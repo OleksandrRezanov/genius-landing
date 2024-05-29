@@ -1,0 +1,95 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.bold {
+  font-weight: 700;
+}
+
+.employment {
+  padding: 80px 104px;
+  border-radius: 32px;
+  background-color: $audience-bg-color;
+  background-image: url('../../img/employment-bg.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 104px) center;
+
+  @include on-tablet {
+    padding: 80px 29px 472px;
+    text-align: center;
+    background-position: center calc(100% - 80px);
+  }
+
+  @include on-mobile {
+    padding: 0 0 244px;
+    background-color: $page-bg-color;
+    background-size: 256px 204px;
+    background-position: center bottom;
+  }
+
+  &__wrapper {
+    max-width: 546px;
+
+    @include on-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+
+    @include on-mobile {
+      margin-bottom: 24px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &__highlighted {
+    color: $page-secondary-text-color;
+  }
+
+  &__info {
+    position: relative;
+    padding-left: 68px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+
+    @include on-mobile {
+      font-size: 14px;
+      line-height: 17.5px;
+    }
+
+    &--grey {
+      color: $header-button-hover-color;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 48px;
+      height: 48px;
+    }
+
+    &--diploma::before {
+      background-image: url('../../img/icons/Employment/diploma.svg');
+    }
+
+    &--qr::before {
+      background-image: url('../../img/icons/Employment/qr.svg');
+    }
+
+    &--access::before {
+      background-image: url('../../img/icons/Employment/access.svg');
+    }
+  }
+}

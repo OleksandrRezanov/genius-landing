@@ -1,0 +1,123 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.highlighted {
+  color: $page-secondary-text-color;
+  overflow: hidden;
+}
+
+.teachers {
+  padding: 0 20px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+
+    @include on-mobile {
+      margin-bottom: 24px;
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 auto 40px;
+    max-width: 542px;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+
+    @include on-mobile {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 327px);
+    max-width: 1021px;
+    margin: 0 auto;
+    gap: 18px;
+
+    @include on-tablet {
+      overflow-y: auto;
+      grid-template-columns: repeat(3, 394px);
+    }
+
+    @include on-mobile {
+      grid-template-columns: repeat(3, 240px);
+    }
+  }
+
+  &__card {
+    border-radius: 20px;
+    height: 484px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include on-mobile {
+      height: 294px;
+      padding: 0 17px;
+      background-position: center;
+    }
+
+
+    &--borys {
+      background-image: url('../../img/teacher-borys.jpg');
+    }
+
+    &--uliana {
+      background-image: url('../../img/teacher-uliana.jpg');
+    }
+
+    &--violetta {
+      background-image: url('../../img/teacher-violetta.jpg');
+    }
+  }
+
+  &__name {
+    margin-top: 343px;
+    margin-bottom: 33px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+
+    @include on-mobile {
+      margin-top: 161px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+    }
+  }
+
+  &__experience {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 17.5px;
+    text-align: center;
+
+    @include on-mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 17.5px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include on-mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

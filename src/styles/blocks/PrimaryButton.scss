@@ -1,0 +1,31 @@
+@import '../utils/variables.scss';
+
+.button {
+  padding: 12px 44px;
+  font-size: 14px;
+  line-height: 17.5px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &--header {
+    border-color: $page-primary-text-color;
+    transition-duration: $hover-transition-duration;
+
+    &:hover {
+      border-color: $header-button-hover-color;
+    }
+  }
+
+  &--purple {
+    border-color: $page-secondary-text-color;
+    background-color: $page-secondary-text-color;
+    transition-duration: $hover-transition-duration;
+
+    &:hover {
+      border-color: $purple-button-hover-color;
+      background-color: $purple-button-hover-color;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.modules {
+  display: flex;
+  gap: 20px;
+  color: $modules-text-color;
+
+  &__list {
+    height: 841px;
+    max-width: 500px;
+    overflow: auto;
+
+    @include on-tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    padding: 32px 66px 32px 16px;
+    cursor: pointer;
+  }
+
+  &__selected {
+    background-color: $modules-selected-bg-color;
+  }
+
+  &__number {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 24px;
+
+    color: $page-primary-text-color;
+    background-color: $page-secondary-text-color;
+  }
+
+  &__description {
+    padding: 32px 72px 32px 32px;
+
+    @include on-tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include on-tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+
+    @include on-mobile {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 32px;
+
+    @include on-mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 8px;
+    }
+  }
+
+  &__topic {
+    position: relative;
+    align-self: flex-start;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 22.5px;
+
+    @include on-mobile {
+      max-width: 225px;
+      font-size: 14px;
+      line-height: 17.5px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 1px;
+      background-color: $page-secondary-text-color;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__result {
+    padding: 20px 63px;
+    margin-bottom: 32px;
+    background-color: $modules-results-bg-color;
+
+    font-size: 14px;
+    line-height: 17.5px;
+
+    @include on-mobile {
+      margin-bottom: 20px;
+      padding: 20px;
+
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__result-title {
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  &__button-container {
+    display: inline-block;
+  }
+}
