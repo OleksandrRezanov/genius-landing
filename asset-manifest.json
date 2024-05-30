@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/genius-landing/static/css/main.9104ee36.css",
-    "main.js": "/genius-landing/static/js/main.c0a3dfc6.js",
+    "main.css": "/genius-landing/static/css/main.0ec07359.css",
+    "main.js": "/genius-landing/static/js/main.4943da03.js",
     "static/js/453.95c38bcc.chunk.js": "/genius-landing/static/js/453.95c38bcc.chunk.js",
     "static/media/audience-bg.png": "/genius-landing/static/media/audience-bg.dbe6eff4e1e4e4504bb4.png",
     "static/media/advantages-bg.png": "/genius-landing/static/media/advantages-bg.22ab3d614f326678e685.png",
@@ -69,12 +69,12 @@
     "static/media/fb-icon.svg": "/genius-landing/static/media/fb-icon.22a1f48eb942b032eeb6.svg",
     "static/media/icon-email-contact.svg": "/genius-landing/static/media/icon-email-contact.09ca7dbd8cfad2469fc4.svg",
     "static/media/menu-burger-icon.svg": "/genius-landing/static/media/menu-burger-icon.f9d3360d7569355bd466c1be8cbeebd9.svg",
-    "main.9104ee36.css.map": "/genius-landing/static/css/main.9104ee36.css.map",
-    "main.c0a3dfc6.js.map": "/genius-landing/static/js/main.c0a3dfc6.js.map",
+    "main.0ec07359.css.map": "/genius-landing/static/css/main.0ec07359.css.map",
+    "main.4943da03.js.map": "/genius-landing/static/js/main.4943da03.js.map",
     "453.95c38bcc.chunk.js.map": "/genius-landing/static/js/453.95c38bcc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9104ee36.css",
-    "static/js/main.c0a3dfc6.js"
+    "static/css/main.0ec07359.css",
+    "static/js/main.4943da03.js"
   ]
 }
